@@ -1,80 +1,72 @@
-/* Base */
-
+/* RESET */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #333;
+  font-family: system-ui, sans-serif;
   background: #f5f5f5;
+  color: #333;
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
+  border-radius: 4px;
 }
 
-/* Layout helpers */
-
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Header */
-
+/* HEADER */
 .site-header {
   background: #111;
-  color: #fff;
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  color: white;
   padding: 1rem 0;
 }
 
+.nav-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
-  font-weight: 700;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
 .main-nav a {
   color: #aaa;
-  text-decoration: none;
   margin-left: 1.5rem;
-  font-size: 0.9rem;
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  font-size: 0.9rem;
 }
 
 .main-nav a.active,
 .main-nav a:hover {
-  color: #fff;
+  color: white;
 }
 
-/* Split sections */
-
+/* SPLIT SECTIONS */
 .split-section {
   display: flex;
-  min-height: 70vh;
+  min-height: 80vh;
 }
 
 .split-left {
   width: 40%;
   background: #1cc5c5;
-  color: #fff;
+  color: white;
   padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  overflow: hidden;
 }
 
 /* subtle line pattern */
@@ -87,7 +79,6 @@ img {
     linear-gradient(210deg, rgba(255,255,255,0.1) 1px, transparent 1px);
   background-size: 120px 120px;
   opacity: 0.5;
-  pointer-events: none;
 }
 
 .split-left > * {
@@ -95,29 +86,9 @@ img {
   z-index: 1;
 }
 
-.split-left h1,
-.split-left h2 {
-  margin: 0 0 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 1.1rem;
-}
-
-.subtitle,
-.tagline {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.8rem;
-}
-
-.scroll-indicator {
-  margin-top: 2rem;
-  font-size: 1.2rem;
-}
-
 .split-right {
   width: 60%;
-  background: #fff;
+  background: white;
   padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
@@ -126,96 +97,35 @@ img {
 }
 
 .split-right p {
-  line-height: 1.7;
-  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-/* Hero tweak */
-
+/* HERO */
 .hero {
   min-height: 100vh;
 }
 
-/* Gallery grids */
-
-.gallery-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.gallery-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.gallery-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.gallery-4 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.gallery-grid img {
-  height: 220px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* Contact form */
-
-.contact-form {
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.contact-form label {
-  font-size: 0.85rem;
+.subtitle {
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.6rem 0.75rem;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  font: inherit;
-}
-
-.contact-form button {
-  margin-top: 0.5rem;
-  padding: 0.7rem 1.2rem;
-  border: none;
-  border-radius: 3px;
-  background: #1cc5c5;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.15em;
   font-size: 0.85rem;
-  cursor: pointer;
 }
 
-.contact-form button:hover {
-  background: #18a9a9;
+.scroll-indicator {
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
 
-/* Footer */
-
+/* FOOTER */
 .site-footer {
   background: #111;
   color: #777;
-  font-size: 0.8rem;
-}
-
-.footer-container {
-  padding: 1.5rem 0;
   text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
 }
 
-/* Responsive */
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .split-section {
     flex-direction: column;
@@ -224,23 +134,12 @@ img {
   .split-left,
   .split-right {
     width: 100%;
-    padding: 3rem 1.75rem;
+    padding: 3rem 1.5rem;
   }
 
-  .gallery-3,
-  .gallery-2,
-  .gallery-4 {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .main-nav a {
-    margin-left: 0;
-    margin-right: 1rem;
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
