@@ -32,19 +32,12 @@ img {
   align-items: center;
 }
 
-.logo {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-}
-
 .main-nav a {
   color: #aaa;
   margin-left: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 0.9rem;
 }
 
 .main-nav a.active,
@@ -52,7 +45,7 @@ img {
   color: white;
 }
 
-/* SPLIT SECTIONS */
+/* SPLIT HERO */
 .split-section {
   display: flex;
   min-height: 80vh;
@@ -69,7 +62,6 @@ img {
   position: relative;
 }
 
-/* subtle line pattern */
 .split-left::before {
   content: "";
   position: absolute;
@@ -93,27 +85,63 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5rem;
 }
 
-.split-right p {
+/* CONTENT SECTIONS */
+.content-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 4rem auto;
+}
+
+.content-section header h2 {
+  margin-bottom: 1rem;
+}
+
+.content {
+  margin-top: 1rem;
   line-height: 1.6;
 }
 
-/* HERO */
-.hero {
-  min-height: 100vh;
+.main-image {
+  margin-top: 1.5rem;
 }
 
-.subtitle {
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.85rem;
+/* FEATURES */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
 }
 
-.scroll-indicator {
-  margin-top: 2rem;
-  font-size: 1.5rem;
+/* GALLERY */
+.gallery-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* CTA */
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  background: #ddd;
+  text-decoration: none;
+  color: #333;
+}
+
+.button.primary {
+  background: #1cc5c5;
+  color: white;
 }
 
 /* FOOTER */
@@ -122,24 +150,4 @@ img {
   color: #777;
   text-align: center;
   padding: 1.5rem 0;
-  font-size: 0.85rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .split-section {
-    flex-direction: column;
-  }
-
-  .split-left,
-  .split-right {
-    width: 100%;
-    padding: 3rem 1.5rem;
-  }
-
-  .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
 }
