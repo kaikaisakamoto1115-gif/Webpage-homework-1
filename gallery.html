@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradigm Shift - Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+<header class="site-header">
+  <div class="container nav-container">
+    <div class="logo">Paradigm Shift</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </div>
 </header>
 
-<section class="gallery-grid">
-    <img src="images/img03.jpg" alt="">
-    <img src="images/img04.jpg" alt="">
-    <img src="images/img05.jpg" alt="">
-    <img src="images/img06.jpg" alt="">
-    <img src="images/img07.jpg" alt="">
-    <img src="images/img08.jpg" alt="">
-    <img src="images/img09.jpg" alt="">
-    <img src="images/img10.jpg" alt="">
-    <img src="images/img11.jpg" alt="">
-</section>
+<main>
+
+  <!-- Gallery block 1 -->
+  <section class="split-section">
+    <div class="split-left">
+      <h2>GALLERY</h2>
+      <p class="tagline">FEATURED IMAGES</p>
+    </div>
+    <div class="split-right">
+      <div class="gallery-grid gallery-3">
+        <img src="images/img06.jpg" alt="Gallery image 1">
+        <img src="images/img07.jpg" alt="Gallery image 2">
+        <img src="images/img08.jpg" alt="Gallery image 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery block 2 -->
+  <section class="split-section">
+    <div class="split-left">
+      <h2>NISL CONSEQUAT</h2>
+      <p class="tagline">IMAGE PAIR</p>
+    </div>
+    <div class="split-right">
+      <div class="gallery-grid gallery-2">
+        <img src="images/img09.jpg" alt="Gallery image 4">
+        <img src="images/img10.jpg" alt="Gallery image 5">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery block 3 (tiles) -->
+  <section class="split-section">
+    <div class="split-left">
+      <h2>MORE IMAGES</h2>
+      <p class="tagline">TILED GRID</p>
+    </div>
+    <div class="split-right">
+      <div class="gallery-grid gallery-4">
+        <img src="images/img11.jpg" alt="Gallery image 6">
+        <img src="images/img01.jpg" alt="Gallery image 7">
+        <img src="images/img02.jpg" alt="Gallery image 8">
+        <img src="images/img03.jpg" alt="Gallery image 9">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-container">
+    <p>&copy; 2026 Paradigm Shift. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
